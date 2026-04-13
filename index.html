@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Venkat Sai Shankar &amp; Keerthi Sri – Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --crimson: #8B1A1A;
+    --crimson-deep: #5C0F0F;
+    --gold: #C9913A;
+    --gold-light: #E8BC6A;
+    --gold-pale: #FFF2DC;
+    --cream: #FFF8EE;
+    --text-dark: #2A1A0A;
+    --text-mid: #6B4423;
+    --text-muted: #9B7B55;
+  }
+  body { background: #1C0A00; font-family: 'Cormorant Garamond', serif; color: var(--text-dark); min-height: 100vh; }
+
+  .hero { background: var(--crimson-deep); padding: 52px 24px 60px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 50%, rgba(201,145,58,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(201,145,58,0.15) 0%, transparent 50%); }
+  .hero-inner { position: relative; z-index: 1; max-width: 620px; margin: 0 auto; }
+
+  .om { font-size: 52px; color: var(--gold-light); display: block; margin-bottom: 10px; }
+  .hero-label { font-size: 13px; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,229,160,0.85); margin-bottom: 30px; }
+  .hero-family { font-size: 16px; color: rgba(255,229,160,0.85); font-style: italic; margin-bottom: 6px; }
+  .hero-family-name { font-size: 22px; color: #FFE5A0; font-weight: 600; line-height: 1.6; margin-bottom: 4px; }
+  .hero-son-label { font-size: 15px; color: rgba(255,229,160,0.8); letter-spacing: 2px; margin: 14px 0 6px; }
+
+  .thin-divider { display: flex; align-items: center; gap: 12px; margin: 18px auto; max-width: 260px; }
+  .thin-divider-line { flex: 1; height: 1px; background: rgba(255,229,160,0.25); }
+  .thin-divider-gem { width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg); flex-shrink: 0; }
+
+  .hero-invite-text { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,229,160,0.55); margin: 24px 0 10px; }
+  .couple-names { font-family: 'Playfair Display', serif; font-size: clamp(34px, 10vw, 64px); color: #FFE5A0; line-height: 1.05; font-weight: 400; }
+  .couple-amp { font-size: clamp(26px, 7vw, 44px); color: var(--gold); font-style: italic; display: block; line-height: 1.2; margin: 4px 0; font-family: 'Cormorant Garamond', serif; }
+  .hero-date { margin-top: 22px; font-size: 18px; color: rgba(255,229,160,0.95); letter-spacing: 3px; }
+
+  .gold-band { background: var(--gold); padding: 12px 0; text-align: center; font-size: 20px; letter-spacing: 14px; color: var(--crimson-deep); }
+
+  .card { background: var(--cream); max-width: 680px; margin: 0 auto; border-left: 3px solid var(--gold); border-right: 3px solid var(--gold); }
+  .card-section { padding: 40px 36px; border-bottom: 1px solid var(--gold-light); }
+  .section-label { font-size: 13px; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; text-align: center; font-weight: 600; }
+
+  .events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .event-card { background: var(--gold-pale); border: 1px solid var(--gold-light); border-top: 3px solid var(--crimson); padding: 22px 18px; text-align: center; }
+  .event-name { font-family: 'Playfair Display', serif; font-size: 20px; font-style: italic; color: var(--crimson); margin-bottom: 12px; }
+  .event-date { font-size: 16px; font-weight: 600; color: var(--text-dark); margin-bottom: 6px; }
+  .event-time { font-size: 15px; color: var(--text-mid); margin-bottom: 8px; }
+  .event-venue { font-size: 14px; color: var(--text-muted); font-style: italic; line-height: 1.6; }
+
+  .quote-section { padding: 36px 36px; background: var(--crimson-deep); text-align: center; }
+  .quote-text { font-size: 23px; color: #FFE5A0; font-style: italic; line-height: 1.8; }
+
+  .rsvp-section { padding: 40px 36px 52px; background: var(--cream); }
+  .rsvp-title { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--crimson); text-align: center; margin-bottom: 6px; }
+  .rsvp-sub { font-size: 16px; color: var(--text-muted); text-align: center; margin-bottom: 28px; font-style: italic; }
+  .rsvp-form { max-width: 480px; margin: 0 auto; }
+
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-mid); margin-bottom: 6px; font-weight: 600; }
+  .form-group input, .form-group select {
+    width: 100%; padding: 12px 14px;
+    background: #FFF; border: 1px solid var(--gold-light);
+    font-family: 'Cormorant Garamond', serif; font-size: 15px;
+    color: var(--text-dark); outline: none; transition: border-color 0.2s;
+    border-radius: 0; -webkit-appearance: none; appearance: none;
+  }
+  .form-group input:focus, .form-group select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,145,58,0.1); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  .attend-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .attend-option input[type="radio"] { display: none; }
+  .attend-option label { display: block; padding: 13px; text-align: center; border: 1px solid var(--gold-light); background: #FFF; cursor: pointer; font-size: 13px; color: var(--text-mid); letter-spacing: 1px; text-transform: uppercase; transition: all 0.2s; }
+  .attend-option input[type="radio"]:checked + label { background: var(--crimson); color: #FFE5A0; border-color: var(--crimson); }
+
+  .submit-btn { width: 100%; padding: 16px; background: var(--crimson); color: #FFE5A0; border: none; font-family: 'Cormorant Garamond', serif; font-size: 16px; letter-spacing: 4px; text-transform: uppercase; cursor: pointer; transition: background 0.2s; margin-top: 10px; }
+  .submit-btn:hover { background: var(--crimson-deep); }
+  .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  .success-msg { display: none; text-align: center; padding: 36px; background: #FFF; border: 1px solid var(--gold-light); }
+  .success-msg .star { font-size: 36px; color: var(--gold); display: block; margin-bottom: 12px; }
+  .success-msg h3 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--crimson); margin-bottom: 8px; }
+  .success-msg p { font-size: 16px; color: var(--text-muted); font-style: italic; line-height: 1.7; }
+
+  .card-divider { display: flex; align-items: center; gap: 12px; margin: 24px 0; }
+  .card-divider-line { flex: 1; height: 1px; background: var(--gold-light); }
+  .card-divider-gem { width: 8px; height: 8px; background: var(--gold); transform: rotate(45deg); flex-shrink: 0; }
+
+  .setup-banner { background: #1a3a5c; color: #b8d4f0; padding: 14px 20px; font-family: -apple-system, sans-serif; font-size: 13px; text-align: center; line-height: 1.7; }
+  .setup-banner a { color: #7ec8f7; }
+  .setup-banner strong { color: #fff; }
+
+  @media (max-width: 500px) {
+    .card-section, .rsvp-section { padding: 28px 18px; }
+    .form-row { grid-template-columns: 1fr; }
+    .events-grid { grid-template-columns: 1fr; }
+    .hero-family-name { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="setup-banner">
+  <strong>One-time setup required:</strong>
+  Go to <a href="https://formspree.io" target="_blank">formspree.io</a> &rarr; create a free account &rarr; New Form &rarr; copy your Form ID &rarr;
+  replace <strong>YOUR_FORM_ID</strong> in the form's action attribute below. RSVP responses will arrive directly in your inbox.
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <span class="om">&#x950;</span>
+    <p class="hero-label">With divine blessings &amp; the joy of our family</p>
+
+    <p class="hero-family">We, the family of</p>
+    <p class="hero-family-name">Mr. Giridhara Babu Ilipilla<br/>&amp; Mrs. Anuradha Ilipilla</p>
+
+    <p class="hero-son-label">joyfully invite you to the wedding of our son</p>
+
+    <div class="thin-divider">
+      <div class="thin-divider-line"></div>
+      <div class="thin-divider-gem"></div>
+      <div class="thin-divider-line"></div>
+    </div>
+
+    <div class="couple-names">
+      Venkat Sai Shankar
+      <span class="couple-amp">&amp;</span>
+      Keerthi Sri
+    </div>
+
+    <p class="hero-date">8th May 2026 &nbsp;&middot;&nbsp; Richmond, VA</p>
+  </div>
+</div>
+
+<div class="gold-band">&#10022; &nbsp; &#10022; &nbsp; &#10022;</div>
+
+<div class="card">
+
+  <!-- EVENTS -->
+  <div class="card-section">
+    <p class="section-label">The celebration</p>
+    <div class="events-grid" style="grid-template-columns: 1fr 1fr;">
+
+      <div class="event-card">
+        <p class="event-name">Wedding Ceremony</p>
+        <p class="event-date">Friday, 8th May 2026</p>
+        <p class="event-time">Starting at 8:00 AM</p>
+        <p class="event-time">🪔 Muhurtam at 10:11 AM</p>
+        <p class="event-venue">Hindu Center of Virginia<br/>6051 Springfield Rd, Glen Allen, VA 23060</p>
+      </div>
+
+      <div class="event-card">
+        <p class="event-name">Dining</p>
+        <p class="event-date">Friday, 8th May 2026</p>
+        <p class="event-time" style="margin-bottom:4px;">🍳 Breakfast &nbsp;&middot;&nbsp; 8:30 AM EST</p>
+        <p class="event-time">🍽️ Lunch &nbsp;&middot;&nbsp; 12:00 PM EST</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- QUOTE -->
+  <div class="quote-section">
+    <p class="quote-text">"Two souls, one heart &mdash;<br/>may they walk together through every season of life."</p>
+  </div>
+
+  <!-- RSVP -->
+  <div class="rsvp-section">
+    <h2 class="rsvp-title">RSVP</h2>
+    <p class="rsvp-sub">Kindly respond by 25th April 2026</p>
+
+    <form
+      class="rsvp-form"
+      action="https://formspree.io/f/xeevqkdp"
+      method="POST"
+      id="rsvpForm"
+    >
+      <input type="hidden" name="_subject" value="Wedding RSVP – Venkat Sai Shankar &amp; Keerthi Sri"/>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="first_name">First name</label>
+          <input type="text" id="first_name" name="first_name" placeholder="First name" required/>
+        </div>
+        <div class="form-group">
+          <label for="last_name">Last name</label>
+          <input type="text" id="last_name" name="last_name" placeholder="Last name" required/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your email</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required/>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required/>
+      </div>
+
+      <div class="form-group">
+        <label for="guests">Number of guests (including yourself)</label>
+        <select id="guests" name="guests" required>
+          <option value="">Select…</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6+">6 or more</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn">Send my RSVP</button>
+    </form>
+
+    <div class="success-msg" id="successMsg">
+      <span class="star">&#10022;</span>
+      <h3>Thank you!</h3>
+      <p>Your RSVP has been received.<br/>The Ilipilla family looks forward to celebrating with you.</p>
+    </div>
+
+    <div class="card-divider" style="max-width:480px;margin:30px auto 0;">
+      <div class="card-divider-line"></div>
+      <div class="card-divider-gem"></div>
+      <div class="card-divider-line"></div>
+    </div>
+
+    <p style="text-align:center;font-size:15px;color:var(--text-muted);margin-top:16px;font-style:italic;">
+      For queries, contact Venkat Sai Shankar:
+      <a href="tel:9408428928" style="color:var(--crimson);font-weight:600;">+1 (940) 842-8928</a>
+    </p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div style="background:var(--crimson-deep);max-width:680px;margin:0 auto;padding:32px 24px;text-align:center;">
+  <p style="color:rgba(255,229,160,0.8);font-size:15px;font-style:italic;">With love &amp; blessings from the Ilipilla family</p>
+  <p style="color:#FFE5A0;font-size:17px;margin-top:8px;">Venkat Sai Shankar &amp; Keerthi Sri &middot; May 2026 &middot; Richmond, VA</p>
+</div>
+
+<script>
+  const form = document.getElementById('rsvpForm');
+  const successMsg = document.getElementById('successMsg');
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = form.querySelector('.submit-btn');
+    btn.textContent = 'Sending\u2026';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+      } else {
+        btn.textContent = 'Something went wrong \u2013 please try again';
+        btn.disabled = false;
+      }
+    } catch(err) {
+      btn.textContent = 'Network error \u2013 please try again';
+      btn.disabled = false;
+    }
+  });
+</script>
+
+</body>
+</html>
